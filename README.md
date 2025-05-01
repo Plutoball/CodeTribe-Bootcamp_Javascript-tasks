@@ -1,2 +1,2 @@
 # CodeTribe-Bootcamp_Javascript-tasks
-tasks are split
+# Merged updates from the remote 'master' branch to sync changes with the local repository.
