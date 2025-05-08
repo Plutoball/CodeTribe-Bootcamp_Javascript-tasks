@@ -1,0 +1,153 @@
+/*styling the body*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    text-align: center;
+    background-color: #0f0e47;
+    color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*layout grid*/
+#game-board{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*scoreboard*/
+#scoreboard{
+    display: flex;
+    width: 440px;
+    height: 48px;
+    margin: 16px auto;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    padding: 4px;
+    background-color: #272757;
+    border-radius: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 8px;
+    color: #8686ac;
+}
+
+/*scoreboard text*/
+#scoreboard .p {
+    margin: 16px 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*basic card appearance*/
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #505081; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #505081;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out, background-color 0.6s ease-in-out; /* Animation for flipping */
+    transform-style: preserve-3d; /* Preserve 3D space for flipping */
+}
+
+.card.flipped {
+    transform: rotateY(360deg); /* Flip the card */
+    background-color: #f0f0f0; /* Change color when flipped */
+    color: #272757; /* Change text color when flipped */
+}
+
+.card.hidden {
+    transform: rotateY(0deg); /* Flip the card back if not match */
+    background-color: #505081; /* Original color */
+}
+
+/*Modal styling*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f0f0f0;
+    color: #272757;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(84, 83, 83, 0.5);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.modal-active {
+    filter: blur(5px); /* Blur the background */
+    pointer-events: none;
+}
+.modal-content {
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.modal-content p {
+    margin: 40px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2f2e2e;
+}
+
+.blur-background {
+    filter: blur(5px); 
+    transition: filter 0.3s ease-in-out; 
+}
+
+#play-button {
+    background: #0f0e47;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#play-button:hover {
+    background: #4CAF50;
+}
+
+#restart-button {
+    background-color: #4CAF50;
+    border: none;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#restart-button:hover {
+    background: #272757
+}

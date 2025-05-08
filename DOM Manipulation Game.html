@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Manipulation Game</title>
+    <title>FLIPPED!</title>
+    <link rel="stylesheet" href="gamestyle.css">
 </head>
+
 <body>
-    
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="modal">
+      <div class="modal-content">
+         <h2>Lets play FLIPPED!</h2>
+         <p>Flip the cards and find matching pairs as fast as you can.</p>
+         <button id="play-button">Start Game</button>
+      </div>
+    </div>
+
+
+    <div id="game-container">
+      <h1>FLIPPED!</h1>
+      <div id="scoreboard">
+        <p id="stopWatch">Time : 00:00</p>
+        <p>Score: <span id="score">0</span></p>
+        <p>Attempts: <span id="attempts">0</span></p>
+      </div>    
+      <div id="game-board"></div>
+    </div>    
+    <script defer src="DOM Manipulation Game.js"></script>
+
+    <!-- Closing Modal-->
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h2>Congratulations!</h2>
+            <p>Your final score is: <span id="final-score"></span></p>
+            <p> Solving time: <span id="final-time"></span></p>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
 </body>
-<script src="DOM Manipulation Game.js"></script>
+
 </html>
 </html>
